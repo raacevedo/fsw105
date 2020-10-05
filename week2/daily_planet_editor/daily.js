@@ -14,7 +14,7 @@ function Who_Wins(is_there_kryptonite,enemy_name)
 {
 if (!is_there_kryptonite)
 {
-    return "Superman beats " +enemy_name+ ", of course";
+    return "Superman beats " + enemy_name + ", of course";
 }
 
 else{
@@ -25,7 +25,7 @@ else{
 for (var i=0; i<Enemies.length; i++);
 {
     var is_there_kryptonite
-    if (i % 2=== 0) {
+    if (i % 2 === 0) {
         is_there_kryptonite = true;
     } else {
         is_there_kryptonite = false;
