@@ -1,29 +1,28 @@
-// //1
-// const name = "John"
-// let age = 101
+//1
+const name = "John"
+let age = 101
 
-// function runForLoop(pets) {
-//     const petObjects = []
-//     for(let i=0; i <pets.length; i++) {
-//         const pet = { type: pets[i]}
-//         name;
-//         if (pets[i] === "cat") {
-//             name = "fluffy"
-//         } else {
-//             name = "spot"
-//         }
-//         console.log("pet name: ", name)
-//         pet.name = name
-//         petObjects.push(pet)
-//     }
-//     console.log("man name: ", name)
-//     return petObjects
-// }
+function runForLoop(pets) {
+    const petObjects = []
+    for(let i=0; i <pets.length; i++) {
+        const pet = { type: pets[i]}
+        let name;
+        if (pets[i] === "cat") {
+            name = "fluffy"
+        } else {
+            name = "spot"
+        }
+        console.log("pet name: ", name)
+        pet.name = petObjects.push(pet)
+    }
+    console.log("man name: ", name)
+    return petObjects
+}
 
-// runForLoop(["cat", "dog"])
+runForLoop(["cat", "dog"])
 console.log("======")
 
-// //2
+//2
 const carrots = ["bright orange", "ripe", "rotten"];
 
 mapVegetables = arr => {
@@ -59,30 +58,34 @@ filterForFriendly = arr => {
         return person.friendly
     })
 }
-console.log(filterForFriendly)
+console.log(filterForFriendly(people))
 console.log("======")
 
 //4
 
 let doMathSum = (a, b) => { return a + b };
+console.log(doMathSum(3,4))
 
 let produceProduct = (a,b) => { return a + b };
-
-console.log(doMathSum([3,4,5,6]))
+console.log(produceProduct(3,4))
+// console.log(doMathSum([3,4,5,6]))
 console.log("======")
 
 //5
-let fname = "Jane";
-let lname = "Doe";
-let age = 100;
+let firstName = "Jane";
+let lastName = "Doe";
+const yearsAlive = 100;
 
-console.log("Hi," + fname + lname +". How does it feel to be" + age + "?")
+const printString = (firstName, lastName, yearsAlive)=> "Hi," + firstName + lastName +". How does it feel to be " + yearsAlive + "?"
+console.log(printString("Kat", "Stark", "40"))
+console.log("======")
 
 //6
-let name = "Jane Doe";
-const age = 100;
 
-const greeting = `Hi ${name}. How does it feel to be ${age}?`
+const fullName = "Jane Doe";
+const age2 = 100;
+
+const greeting = `Hi ${fullName}. How does it feel to be ${age2}?`
 
 console.log(greeting)
 
@@ -108,4 +111,10 @@ const animals = [
 
 let filterForDogs = (arr) => arr.filter(animal => (animal.type === "dog" ? true :false))
 
-    console.log(filterForDogs)
+    console.log(filterForDogs(animals))
+    console.log("======")
+
+//8
+const vacay = (name, location) => `Hi ${name}! Welcome to ${location}. I hope you enjoy your stay. Please ask the president of ${location} if you need anything.`
+
+console.log(vacay("Janice", "Hawaii"))
