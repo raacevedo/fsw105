@@ -12,10 +12,10 @@ const options = ["Walk", "Exit", "Print"];
 let grab = valubles[Math.floor(Math.random() * valubles.length)];
 
 function game(){
-    const attackLoss = Math.floor(math.random() * (5 - 4 + 2) + 5);
+    const attackLoss = Math.floor(Math.random() * (5 - 4 + 2) + 5);
     const villain = villains[Math.floor(Math.random() * villains.length)];
-    let villainLife = 50;
-    const villainPower = Math.floor(Math.random() * (5 - 3 + 4) + 5);
+    let villainsLife = 50;
+    const villainsPower = Math.floor(Math.random() * (5 - 3 + 4) + 5);
 
     const menu = readlineSync.keyInSelect(options, "What is your next move?");
     if (options[menu] == 'Exit') {
@@ -29,7 +29,7 @@ function game(){
         }else if(key >= .3){
             console.log(villain + " wants to fight!");
 
-                while(villainLife > 0 && playerLife > 0){
+                while(villainsLife > 0 && playerLife > 0){
 
                     const player = readlineSync.question('What do you want to do? Enter "r" to run or "f" to fight: ');
 
@@ -37,7 +37,7 @@ function game(){
                         case "r": //to run
                             const run = Math.random();
                             if(run < .5){
-                                console.log('Before you could walk away ' + villain + 'attacks you with ' + villainsPower);
+                                console.log('Before you could walk away ' + villain + ' attacks you with ' + villainsPower);
                             }else {
                                 console.log('You ran far away!');
                                 break;
@@ -45,7 +45,7 @@ function game(){
                         
                         case "f": //fight the villain
                            villainsLife -= attackLoss; 
-                           console.log('You attacked' + villains + 'with' + attackLoss);
+                           console.log('You attacked ' + villain + ' with ' + attackLoss);
                            
                            playerLife -= villainsPower;
                            console.log('You have been attacked ' + villainsPower);
@@ -68,7 +68,7 @@ function game(){
 
 
 
-while(playerLife >50){
+while(playerLife >=50){
     playerRestore = function(){
         playerActive = true;
         playerLife = 50;
@@ -76,3 +76,4 @@ while(playerLife >50){
     playerRestore();
     game();
 }
+game()

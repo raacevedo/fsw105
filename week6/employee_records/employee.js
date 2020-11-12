@@ -2,13 +2,15 @@ function EmployeeForm(name, jobTitle, salary, status) {
     this.name = name;
     this.jobTitle = jobTitle;
     this.salary = salary;
-    this.status = status="Full Time";
+    this.status = status;
 }
 
-let Bob = new EmployeeForm("Bob", "Store Manager", 75000, )
-let Jane = new EmployeeForm("Jane", "Cashier", 16600, "part time")
+let Employees = []
+
+let Bob = new EmployeeForm("Bob", "Store Manager", 75000, "Part time")
+let Jane = new EmployeeForm("Jane", "Cashier", 16600, )
 let Susan = new EmployeeForm("Susan","Back Store Supervisor", 42000)
-let Rick = new EmployeeForm("Rick", "Stocker", 30000,)
+let Rick = new EmployeeForm("Rick", "Stocker", 30000, "Full Time")
 
 
 // this.printEmployeeForm = function(){
